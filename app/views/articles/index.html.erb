@@ -4,11 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Articles</title>
- 
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <h1 class="article-heading">Articles</h1>
+  <br>
+  <ul class="button-row">
+    <li><a href="#"><span>Everything</span></a></li>
+    <li><a href="#"><span>Releases</span></a></li>
+    <li><a href="#"><span>News</span></a></li>
+  </ul>
 
   <div class="article-container">
     <% @articles.each do |article| %>
@@ -16,7 +20,7 @@
         <p class="article-date">Published on <%= Time.now.strftime("%B %d, %Y") %></p>
         <h2 class="article-title"><%= link_to article.title, article %></h2>
       </div>
-        <p class="article-body"><%= article.body[0..100] %>...</p> 
+      <p class="show-less"><%= article.body[0..100] %>...</p> 
       <div class="divider"></div>
     <% end %>
   </div>
@@ -24,5 +28,3 @@
   <%= link_to "New Article", new_article_path, class: "btn" %>
 </body>
 </html>
-
-  
