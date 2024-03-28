@@ -10,3 +10,29 @@
     }, class: "btn", style: "margin-left: 10px;" %>
   </div>
 </div>
+<div class="comments-section">
+  <h2 class="title-body-text">Comments</h2>
+  <% @article.comments.each do |comment| %>
+    <div class="comment">
+      <p><strong>Commenter:</strong> <%= comment.commenter %></p>
+      <p><strong>Comment:</strong> <%= comment.body %></p>
+    </div>
+  <% end %>
+</div>
+
+<div class="comment-form">
+  <h2 class="title-body-text">Add a comment:</h2>
+  <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+    <p>
+      <%= form.label :commenter %><br>
+      <%= form.text_field :commenter, class: "comment-input" %>
+    </p>
+    <p>
+      <%= form.label :body %><br>
+      <%= form.text_area :body, class: "comment-input" %>
+    </p>
+    <p>
+      <%= form.submit "Submit Comment", class: "submit-btn" %>
+    </p>
+  <% end %>
+</div>
