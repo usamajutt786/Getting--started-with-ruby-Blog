@@ -1,0 +1,11 @@
+<div>
+  <h1 class="article-title"><%= @article.title %></h1>
+  <p class="article-body-p"><%= @article.body %></p>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <%= link_to "Edit", edit_article_path(@article), class: "btn" %>
+    <%= link_to "Destroy", article_path(@article), data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    }, class: "btn", style: "margin-left: 10px;" %>
+  </div>
+</div>

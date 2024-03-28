@@ -1,0 +1,56 @@
+body {
+    padding-top: 10px;
+    padding-right: 150px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+}
+
+.btn {
+  display: block;
+  width: 200px;
+  height: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 19px auto;
+}
+
+.article-container {
+  text-align: center;
+}
+
+.article-heading {
+  text-align: center;
+  font-size: 60px;
+  color: red;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.article-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-title {
+  color: red;
+  font-size: 35px;
+  margin-right: 20px; /* Add padding between title and published date */
+}
+
+.published-date {
+  font-size: 15px;
+  font-style: italic;
+  color: black;
+}
+
+.divider {
+  margin-top: 19px;
+  border-top: 1px solid black;
+}

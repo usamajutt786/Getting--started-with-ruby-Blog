@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+ 
+</head>
+<body>
+
+  <h1 class="article-heading">Articles</h1>
+
+  <div class="article-container">
+    <% @articles.each do |article| %>
+      <div class="article-info">
+        <p class="article-date">Published on <%= Time.now.strftime("%B %d, %Y") %></p>
+        <h2 class="article-title"><%= link_to article.title, article %></h2>
+      </div>
+        <p class="article-body"><%= article.body[0..100] %>...</p> 
+      <div class="divider"></div>
+    <% end %>
+  </div>
+
+  <%= link_to "New Article", new_article_path, class: "btn" %>
+</body>
+</html>
+
+  
